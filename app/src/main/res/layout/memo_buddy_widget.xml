@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.MemoBuddy.AppWidget.Container"
+    android:orientation="vertical"
+    android:layout_gravity="left"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/widget"
+    android:theme="@style/Theme.MemoBuddy.AppWidgetContainer">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:text="Note Title"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/darkgray"
+        android:id="@+id/widget_title"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note Content"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/darkgray"
+        android:id="@+id/widget_content"/>
+</LinearLayout>

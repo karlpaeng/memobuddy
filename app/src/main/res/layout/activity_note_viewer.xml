@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    android:id="@+id/noteViewAct"
+    tools:context=".NoteViewer">
+
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_ripple_white_s"
+        android:clickable="true"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_arrow_back_24"
+        android:drawableTint="@color/darkgray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_round_white_s"
+        android:ems="9"
+        android:hint="Title"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/darkgray"
+        android:fontFamily="@font/montserrat_medium"
+        android:inputType="text"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@id/etContent"
+        app:layout_constraintLeft_toRightOf="@id/tvBack" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_round_white_s"
+        android:ems="16"
+        android:fontFamily="monospace"
+        android:gravity="left|top"
+        android:hint="Write something here"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/darkgray"
+        android:inputType="textMultiLine"
+        android:padding="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBack" />
+
+    <TextView
+        android:id="@+id/tvDateCreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/etContent"
+        app:layout_constraintTop_toBottomOf="@id/etContent"
+        android:text="asd"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl06"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_round_white_s"
+        android:padding="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/etContent"
+        app:layout_constraintLeft_toRightOf="@id/etTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/CLcolorSelector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_round_gray_s"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="7dp">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/shape_round_dark_s"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="Save"
+        android:clickable="true"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/shape_round_dark_s"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:text="Cancel"
+        android:clickable="true"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvSave" />
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/shape_round_dark_s"
+        android:clickable="true"
+        android:fontFamily="sans-serif-black"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:text=""
+        android:drawableLeft="@drawable/ic_delete_forever_24"
+        android:drawableTint="@color/white"
+
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
